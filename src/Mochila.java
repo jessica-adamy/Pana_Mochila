@@ -49,13 +49,30 @@ public class Mochila {
 			}
 			
 			System.out.println(+(i+1)+"º Iteração: \n");
-			for (int k = 0; k < matriz.length; k++) {
-				for (int l = 0; l <= matriz.length; l++) {
-					System.out.printf(matriz[k][l] + "  ");
-				}
-				System.out.println();
+//			for (int k = 0; k < matriz.length; k++) {
+//				for (int l = 0; l <= matriz.length; l++) {
+//					System.out.printf(matriz[k][l] + "  ");
+//				}
+//				System.out.println();
+//			}
+			System.out.print("   ");
+			for(int k=0;k<=capacidade;k++){
+				System.out.print(k+"           ");
 			}
-			
+			System.out.println();
+			for(int l=0;l<=qtd_itens;l++){
+				System.out.print(l+" ");
+				for(int m=0;m<=capacidade;m++){
+					if (matriz[l][m] != null && matriz[l][m].length() >= 3){
+						System.out.print(" "+matriz[l][m]+"        ");
+					} else {
+						System.out.print(" "+matriz[l][m]+"          ");	
+					}
+					
+				}
+				System.out.println();	
+			}
+			System.out.println();
 		}
 
 	}
